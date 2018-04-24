@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dxlin.dao.UserDao">
+    <select id="findUserById" parameterType="INTEGER" resultType="com.dxlin.entity.User">
+        SELECT * from ub WHERE id = #{id}
+    </select>
+
+    <select id="findAllName" resultType="String">
+        SELECT
+          name_tb
+        FROM
+          ub
+    </select>
+</mapper>
